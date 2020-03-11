@@ -9,13 +9,13 @@ const calendarDisplay = document.querySelector(".calendar-days");
 let dt = new Date(); // take your system datetime
 let today = new Date();
 
-function renderDate() {
+const renderDate = () => {
     dt.setDate(1);
     let dayBegin = dt.getDay(); // take day of week
     let endDate = new Date(dt.getFullYear(), dt.getMonth() + 1, 0).getDate(); // take number of date of current month
     let prevDate = new Date(dt.getFullYear(), dt.getMonth(), 0).getDate();
 
-    dateStrDisplay.innerHTML = dt.toDateString(); 
+    dateStrDisplay.innerHTML = dt.toDateString();
     currentMonthDisplay.innerHTML = months[dt.getMonth()];
 
     let cells = "";
@@ -31,7 +31,7 @@ function renderDate() {
     }
     calendarDisplay.innerHTML = cells;
 }
-renderDate();
+
 const moveBack = () => {
     dt.setMonth(dt.getMonth() - 1);
     renderDate();
@@ -40,7 +40,11 @@ const moveNext = () => {
     dt.setMonth(dt.getMonth() + 1);
     renderDate();
 }
-const nDay = document.querySelectorAll(".calendar-days");
-console.log(nDay);
-prevBtn.addEventListener("click", moveBack);
-nextBtn.addEventListener("click", moveNext);
+
+const init = () => {
+    prevBtn.addEventListener("click", moveBack);
+    nextBtn.addEventListener("click", moveNext);
+    renderDate();
+}
+
+init();
