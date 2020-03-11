@@ -55,7 +55,6 @@ body {
     width: 14.28%;
     text-align: center;
 }
-
 .days div:hover {
     background-color: #dfe6e9;
 }
@@ -63,12 +62,13 @@ body {
     background-color: #27ae68;
     color: #fff;
 }
-.next-date {
-    color:  rgb(155, 155, 155);
-}
 .prev-date {
     color: rgb(155, 155, 155);
 }
+.next-date {
+    color:  rgb(155, 155, 155);
+}
+
 #month {
     font-size: 40px;
     font-weight: 500;

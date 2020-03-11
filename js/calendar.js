@@ -34,7 +34,7 @@ const renderDate = () => {
     }
     for (let day = 1; day <= endDate; day++) {
         if (day === today.getDate() && today.getMonth() === dt.getMonth()) {
-            cells += `<div class="today">${day}</div>`
+            cells += `<div class="number today">${day}</div>`
         } else {
             cells += `<div class="number">${day}</div>`;
         }
