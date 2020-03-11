@@ -6,8 +6,8 @@ const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 const currentMonthDisplay = document.querySelector("#month");
 const dateStrDisplay = document.querySelector("#date_str");
-const dayDisplay = document.querySelector(".calendar-days");
-const weekdayDisplay = document.querySelector(".calendar-weekdays");
+const dayDisplay = document.querySelector(".days");
+const weekdayDisplay = document.querySelector(".weekdays");
 
 let dt = new Date(); // take your system datetime
 const today = new Date();
@@ -36,11 +36,11 @@ const renderDate = () => {
         if (day === today.getDate() && today.getMonth() === dt.getMonth()) {
             cells += `<div class="today">${day}</div>`
         } else {
-            cells += `<div>${day}</div>`;
+            cells += `<div class="number">${day}</div>`;
         }
     }
     dayDisplay.innerHTML = cells;
-}
+} 
 
 const moveBack = () => {
     dt.setMonth(dt.getMonth() - 1);

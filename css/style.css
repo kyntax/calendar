@@ -16,13 +16,13 @@ body {
     margin: 0;
     box-sizing: border-box;
 }
-#calendar {
+.calendar {
     margin: auto;
     width: 600px;
     background-color: #fff;
     box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.2);
 }
-.calendar-header {
+.header {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -31,32 +31,32 @@ body {
     color: #fff;
     padding: 40px 30px;
 }
-.calendar-weekdays {
+.weekdays {
     display: flex;
     background-color: #27ae60;
     color: #fff;
     padding: 7px 0;
     
 }
-.calendar-days {
+.days {
     display: flex;
     flex-wrap: wrap;
 
     font-weight: 300;
     padding: 10px 0;
 }
-.calendar-days div {
+.days div {
     margin-bottom: 10px;
     padding: 10px 0;
     transition: all 0.4s;
     cursor: pointer;
 }
-.calendar-weekdays div, .calendar-days div{
+.weekdays div, .days div{
     width: 14.28%;
     text-align: center;
 }
 
-.calendar-days div:hover {
+.days div:hover {
     background-color: #dfe6e9;
 }
 .today {
